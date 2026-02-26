@@ -12,7 +12,18 @@ import time
 import subprocess
 import traceback
 import gc
+import signal
 from pathlib import Path
+
+# Safety timeout: auto-exit after 24 hours to prevent runaway costs
+MAX_RUNTIME_SECONDS = 24 * 3600
+
+def _timeout_handler(signum, frame):
+    print(f"\n\nSAFETY TIMEOUT: {MAX_RUNTIME_SECONDS}s reached. Exiting to prevent runaway cost.")
+    sys.exit(1)
+
+signal.signal(signal.SIGALRM, _timeout_handler)
+signal.alarm(MAX_RUNTIME_SECONDS)
 
 REPO_URL = "git@github.com:jwendyr/fairytale-covers.git"
 WORK_DIR = "/workspace/fairytale-covers"
@@ -159,6 +170,23 @@ def unload_model(pipe):
     print("GPU memory cleared.")
 
 
+def self_push_progress(work_dir, batch_id, models, total, completed, failed,
+                       results, start_time, model_short):
+    """Push intermediate progress to GitHub (inside generation loop)."""
+    manifest = {
+        "batch_id": batch_id,
+        "models": models,
+        "total": total,
+        "completed": completed,
+        "failed": failed,
+        "results": results,
+        "elapsed_seconds": int(time.time() - start_time),
+    }
+    with open(os.path.join(work_dir, "results.json"), "w") as f:
+        json.dump(manifest, f, indent=2)
+    git_push(work_dir, f"{model_short}: {completed}/{total}")
+
+
 def generate_image(pipe, config, prompt, output_path, seed=None):
     import torch
 
@@ -299,7 +327,13 @@ def main():
                 })
                 failed += 1
 
-        # Push after each model completes
+            # Push progress every 25 images or on last image
+            if (i + 1) % 25 == 0 or (i + 1) == len(jobs):
+                self_push_progress(WORK_DIR, batch_id, models, total_images,
+                                   completed, failed, results, start_time,
+                                   model_short)
+
+        # Always push after each model finishes
         manifest = {
             "batch_id": batch_id,
             "models": models,
