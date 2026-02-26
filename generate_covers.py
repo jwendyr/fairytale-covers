@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Fairytale Cover Generator — runs on vast.ai GPU instances.
-Pulls FLUX.1-schnell from HuggingFace (Apache 2.0, ungated),
-generates covers from batch.json, pushes results back to GitHub.
+Generates covers from batch.json, pushes results back to GitHub.
+Supports multiple models for comparison (FLUX.1-dev, SD3.5, flux.1-lite).
 """
 
 import json
@@ -11,6 +11,7 @@ import sys
 import time
 import subprocess
 import traceback
+import gc
 from pathlib import Path
 
 REPO_URL = "git@github.com:jwendyr/fairytale-covers.git"
@@ -18,7 +19,30 @@ WORK_DIR = "/workspace/fairytale-covers"
 BATCH_FILE = "batch.json"
 OUTPUT_DIR = "output"
 STATUS_FILE = "status.json"
-MODEL_ID = "Freepik/flux.1-lite-8B-alpha"
+
+# Default model if not specified in batch.json
+DEFAULT_MODEL = "Freepik/flux.1-lite-8B-alpha"
+
+# Model configs: pipeline class, default params
+MODEL_CONFIGS = {
+    "black-forest-labs/FLUX.1-dev": {
+        "pipeline": "FluxPipeline",
+        "steps": 28,
+        "guidance": 3.5,
+        "max_seq_len": 512,
+    },
+    "Freepik/flux.1-lite-8B-alpha": {
+        "pipeline": "FluxPipeline",
+        "steps": 24,
+        "guidance": 3.5,
+        "max_seq_len": 512,
+    },
+    "stabilityai/stable-diffusion-3.5-large": {
+        "pipeline": "StableDiffusion3Pipeline",
+        "steps": 28,
+        "guidance": 4.5,
+    },
+}
 
 
 def run_cmd(cmd, cwd=None, timeout=300):
@@ -99,38 +123,63 @@ def clone_repo():
         raise RuntimeError(f"Failed to clone repo: {result.stderr}")
 
 
-def load_model():
+def load_model(model_id):
     import torch
-    from diffusers import FluxPipeline
 
-    print(f"Loading model {MODEL_ID}...")
-    pipe = FluxPipeline.from_pretrained(
-        MODEL_ID,
-        torch_dtype=torch.bfloat16,
-    )
+    config = MODEL_CONFIGS.get(model_id, MODEL_CONFIGS[DEFAULT_MODEL])
+    pipeline_type = config["pipeline"]
+
+    print(f"Loading model {model_id} (pipeline: {pipeline_type})...")
+
+    if pipeline_type == "StableDiffusion3Pipeline":
+        from diffusers import StableDiffusion3Pipeline
+        pipe = StableDiffusion3Pipeline.from_pretrained(
+            model_id,
+            torch_dtype=torch.bfloat16,
+        )
+    else:
+        from diffusers import FluxPipeline
+        pipe = FluxPipeline.from_pretrained(
+            model_id,
+            torch_dtype=torch.bfloat16,
+        )
+
     pipe.enable_model_cpu_offload()
-    print("Model loaded successfully.")
-    return pipe
+    print(f"Model {model_id} loaded successfully.")
+    return pipe, config
 
 
-def generate_image(pipe, prompt, output_path, seed=None):
+def unload_model(pipe):
+    """Free GPU memory between models."""
+    import torch
+    del pipe
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    print("GPU memory cleared.")
+
+
+def generate_image(pipe, config, prompt, output_path, seed=None):
     import torch
 
     generator = None
     if seed is not None:
         generator = torch.Generator("cpu").manual_seed(seed)
 
-    # Freepik flux.1-lite: 22-30 steps, guidance 3.5
-    image = pipe(
-        prompt,
-        height=1024,
-        width=1024,
-        guidance_scale=3.5,
-        num_inference_steps=24,
-        max_sequence_length=512,
-        generator=generator,
-    ).images[0]
+    kwargs = {
+        "prompt": prompt,
+        "height": 1024,
+        "width": 1024,
+        "guidance_scale": config["guidance"],
+        "num_inference_steps": config["steps"],
+        "generator": generator,
+    }
 
+    # FLUX models support max_sequence_length
+    if "max_seq_len" in config:
+        kwargs["max_sequence_length"] = config["max_seq_len"]
+
+    image = pipe(**kwargs).images[0]
     image.save(output_path)
     return output_path
 
@@ -157,24 +206,18 @@ def main():
 
     jobs = batch.get("jobs", [])
     batch_id = batch.get("batch_id", "unknown")
-    print(f"Batch ID: {batch_id}, Jobs: {len(jobs)}")
+    models = batch.get("models", [DEFAULT_MODEL])
+    print(f"Batch ID: {batch_id}, Jobs: {len(jobs)}, Models: {len(models)}")
+    for m in models:
+        print(f"  - {m}")
 
     if not jobs:
         update_status({"phase": "complete", "batch_id": batch_id, "total": 0, "completed": 0})
         sys.exit(0)
 
-    update_status({
-        "phase": "loading_model",
-        "batch_id": batch_id,
-        "total": len(jobs),
-        "completed": 0,
-    })
+    total_images = len(jobs) * len(models)
 
-    # Phase 2: Load model
-    print("\n[Phase 2] Loading model...")
-    pipe = load_model()
-
-    # Phase 3: Generate images
+    # Phase 2+3: Load each model and generate
     output_dir = os.path.join(WORK_DIR, OUTPUT_DIR)
     os.makedirs(output_dir, exist_ok=True)
 
@@ -182,76 +225,119 @@ def main():
     completed = 0
     failed = 0
 
-    for i, job in enumerate(jobs):
-        job_id = job.get("id", f"job_{i}")
-        prompt = job.get("prompt", "")
-        story_path = job.get("story_path", "")
-        seed = job.get("seed")
+    for model_idx, model_id in enumerate(models):
+        model_short = model_id.split("/")[-1]
+        model_dir = os.path.join(output_dir, model_short)
+        os.makedirs(model_dir, exist_ok=True)
 
-        print(f"\n[{i+1}/{len(jobs)}] Generating: {story_path}")
-        print(f"  Prompt: {prompt[:100]}...")
+        print(f"\n{'='*60}")
+        print(f"MODEL {model_idx+1}/{len(models)}: {model_id}")
+        print(f"{'='*60}")
 
-        safe_name = story_path.replace("/", "__")
-        output_path = os.path.join(output_dir, f"{safe_name}.png")
+        update_status({
+            "phase": "loading_model",
+            "batch_id": batch_id,
+            "model": model_id,
+            "model_index": model_idx + 1,
+            "total_models": len(models),
+            "total": total_images,
+            "completed": completed,
+        })
 
         try:
-            generate_image(pipe, prompt, output_path, seed)
-            file_size = os.path.getsize(output_path)
-            print(f"  OK: {file_size} bytes")
-
-            results.append({
-                "id": job_id,
-                "story_path": story_path,
-                "filename": f"{safe_name}.png",
-                "status": "completed",
-                "file_size": file_size,
-            })
-            completed += 1
-
+            pipe, config = load_model(model_id)
         except Exception as e:
-            print(f"  FAILED: {e}")
+            print(f"FAILED to load model {model_id}: {e}")
             traceback.print_exc()
-            results.append({
-                "id": job_id,
-                "story_path": story_path,
-                "status": "failed",
-                "error": str(e),
-            })
-            failed += 1
+            for job in jobs:
+                results.append({
+                    "id": job.get("id", "?"),
+                    "story_path": job.get("story_path", ""),
+                    "model": model_id,
+                    "status": "failed",
+                    "error": f"Model load failed: {e}",
+                })
+                failed += 1
+            continue
 
-        # Push progress every 5 images or on last
-        if (i + 1) % 5 == 0 or (i + 1) == len(jobs):
-            manifest = {
-                "batch_id": batch_id,
-                "total": len(jobs),
-                "completed": completed,
-                "failed": failed,
-                "results": results,
-                "elapsed_seconds": int(time.time() - start_time),
-            }
-            with open(os.path.join(WORK_DIR, "results.json"), "w") as f:
-                json.dump(manifest, f, indent=2)
+        for i, job in enumerate(jobs):
+            job_id = job.get("id", f"job_{i}")
+            prompt = job.get("prompt", "")
+            story_path = job.get("story_path", "")
+            seed = job.get("seed")
 
-            git_push(WORK_DIR, f"batch {completed}/{len(jobs)}")
+            safe_name = story_path.replace("/", "__")
+            output_path = os.path.join(model_dir, f"{safe_name}.png")
 
-            update_status({
-                "phase": "generating",
-                "batch_id": batch_id,
-                "total": len(jobs),
-                "completed": completed,
-                "failed": failed,
-                "current_job": i + 1,
-                "elapsed_seconds": int(time.time() - start_time),
-            })
+            print(f"\n[{model_short}] [{i+1}/{len(jobs)}] Generating: {story_path}")
+            print(f"  Prompt: {prompt[:100]}...")
+
+            try:
+                generate_image(pipe, config, prompt, output_path, seed)
+                file_size = os.path.getsize(output_path)
+                print(f"  OK: {file_size} bytes")
+
+                results.append({
+                    "id": job_id,
+                    "story_path": story_path,
+                    "model": model_id,
+                    "filename": f"{model_short}/{safe_name}.png",
+                    "status": "completed",
+                    "file_size": file_size,
+                })
+                completed += 1
+
+            except Exception as e:
+                print(f"  FAILED: {e}")
+                traceback.print_exc()
+                results.append({
+                    "id": job_id,
+                    "story_path": story_path,
+                    "model": model_id,
+                    "status": "failed",
+                    "error": str(e),
+                })
+                failed += 1
+
+        # Push after each model completes
+        manifest = {
+            "batch_id": batch_id,
+            "models": models,
+            "total": total_images,
+            "completed": completed,
+            "failed": failed,
+            "results": results,
+            "elapsed_seconds": int(time.time() - start_time),
+        }
+        with open(os.path.join(WORK_DIR, "results.json"), "w") as f:
+            json.dump(manifest, f, indent=2)
+
+        git_push(WORK_DIR, f"{model_short}: {completed}/{total_images}")
+
+        update_status({
+            "phase": "generating",
+            "batch_id": batch_id,
+            "model": model_id,
+            "model_index": model_idx + 1,
+            "total_models": len(models),
+            "total": total_images,
+            "completed": completed,
+            "failed": failed,
+            "elapsed_seconds": int(time.time() - start_time),
+        })
+
+        # Unload model before loading next
+        unload_model(pipe)
 
     # Phase 4: Done
     elapsed = int(time.time() - start_time)
-    print(f"\n[Phase 4] Complete! {completed}/{len(jobs)} images in {elapsed}s")
+    print(f"\n[Phase 4] Complete! {completed}/{total_images} images in {elapsed}s")
 
     update_status({
         "phase": "complete",
         "batch_id": batch_id,
-        "total": len(jobs),
+        "models": models,
+        "total": total_images,
         "completed": completed,
         "failed": failed,
         "elapsed_seconds": elapsed,

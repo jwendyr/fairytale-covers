@@ -1,5 +1,5 @@
 {
-  "batch_id": "batch_1772106904843",
+  "batch_id": "comparison_1772108361",
   "created_at": "2026-02-26T11:55:09.909Z",
   "jobs": [
     {
@@ -24,5 +24,10 @@
       "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration showing Cinderella in her glittering gown of gold and silver, adorned with jewels, descending from the golden pumpkin coach. The handsome, young Prince, with soft brown hair and kind eyes, reaches out to take her hand. Six dapple-grey horses and six footmen in gold and silver livery stand by as the jolly rat coachman with smart whiskers grins. The scene is set outside the castle, bathed in warm, soft lighting, suggesting a magical, fairy-tale atmosphere just before midnight. The castle glows in the background, with a hint of the ballroom visible through the arched doorway. Cinderella's glass slippers sparkle as she steps onto the cobbled path. Mood: joyous, enchanted, romantic.",
       "seed": 1376206261
     }
+  ],
+  "models": [
+    "Freepik/flux.1-lite-8B-alpha",
+    "black-forest-labs/FLUX.1-dev",
+    "stabilityai/stable-diffusion-3.5-large"
   ]
 }
