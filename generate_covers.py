@@ -18,7 +18,7 @@ WORK_DIR = "/workspace/fairytale-covers"
 BATCH_FILE = "batch.json"
 OUTPUT_DIR = "output"
 STATUS_FILE = "status.json"
-MODEL_ID = "black-forest-labs/FLUX.1-schnell"
+MODEL_ID = "Freepik/flux.1-lite-8B-alpha"
 
 
 def run_cmd(cmd, cwd=None, timeout=300):
@@ -120,14 +120,14 @@ def generate_image(pipe, prompt, output_path, seed=None):
     if seed is not None:
         generator = torch.Generator("cpu").manual_seed(seed)
 
-    # FLUX.1-schnell: optimized for 4 steps, no guidance needed
+    # Freepik flux.1-lite: 22-30 steps, guidance 3.5
     image = pipe(
         prompt,
         height=1024,
         width=1024,
-        guidance_scale=0.0,
-        num_inference_steps=4,
-        max_sequence_length=256,
+        guidance_scale=3.5,
+        num_inference_steps=24,
+        max_sequence_length=512,
         generator=generator,
     ).images[0]
 
