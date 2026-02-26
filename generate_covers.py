@@ -70,27 +70,28 @@ def setup_ssh():
 
 
 def clone_repo():
+    global WORK_DIR
+
     # If we're already inside the repo (launched by onstart), just use it
     batch_here = os.path.join(WORK_DIR, BATCH_FILE)
     if os.path.exists(batch_here):
         print(f"Repo already exists at {WORK_DIR} with {BATCH_FILE}, skipping clone.")
         return
 
-    # Also check if we're running from inside the repo already
-    cwd_batch = os.path.join(os.getcwd(), BATCH_FILE) if os.getcwd() != "/" else None
-    if cwd_batch and os.path.exists(cwd_batch) and os.getcwd() != WORK_DIR:
-        # We're in the repo but at a different path — update WORK_DIR
-        global WORK_DIR
-        WORK_DIR = os.getcwd()
+    # Also check if we're running from inside the repo already (different path)
+    try:
+        cwd = os.getcwd()
+    except OSError:
+        cwd = "/"
+    cwd_batch = os.path.join(cwd, BATCH_FILE)
+    if cwd != "/" and os.path.exists(cwd_batch) and cwd != WORK_DIR:
+        WORK_DIR = cwd
         print(f"Running from repo at {WORK_DIR}, skipping clone.")
         return
 
-    # Fresh clone needed — make sure we're not deleting our own cwd
+    # Fresh clone needed — cd out first to avoid deleting our cwd
+    os.chdir("/tmp")
     if os.path.exists(WORK_DIR):
-        try:
-            os.chdir("/workspace")
-        except Exception:
-            os.chdir("/tmp")
         run_cmd(f"rm -rf {WORK_DIR}")
 
     result = run_cmd(f"git clone {REPO_URL} {WORK_DIR}", timeout=120)
