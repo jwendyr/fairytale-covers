@@ -1,10 +1,12 @@
 {
-  "phase": "loading_model",
+  "phase": "generating",
   "batch_id": "sd35_comparison_1772132217",
   "model": "stabilityai/stable-diffusion-3.5-large",
   "model_index": 1,
   "total_models": 1,
   "total": 2,
-  "completed": 0,
-  "updated_at": "2026-02-26T19:03:14Z"
+  "completed": 2,
+  "failed": 0,
+  "elapsed_seconds": 1157,
+  "updated_at": "2026-02-26T19:22:27Z"
 }
