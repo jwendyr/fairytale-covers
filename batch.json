@@ -1,6 +1,6 @@
 {
-  "batch_id": "batch_1772102931535",
-  "created_at": "2026-02-26T10:49:06.195Z",
+  "batch_id": "batch_1772103423890",
+  "created_at": "2026-02-26T10:57:15.959Z",
   "jobs": [
     {
       "id": "english__andrew_lang__the_blue_fairy_book__blue_beard",
@@ -10,8 +10,8 @@
       "book": "the_blue_fairy_book",
       "story": "blue_beard",
       "title": "Blue Beard",
-      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration for \"Bluebeard\". The youngest sister, a beautiful young woman with long flowing brown hair and a pale blue dress, kneels in the center of a grand, gothic-style chamber. She is illuminated by soft, warm light filtering from a high window. She desperately clutches a small, ornate golden key, stained with vivid red blood which seems to magically reappear no matter how hard she tries to wipe it with her handkerchief. Behind her, the dark entrance to the forbidden closet looms, hinting at the horrors within through a barely visible crack of light. The walls are a muted grey stone, and the floor is polished wood. A subtle fairy tale atmosphere is achieved through floating dust motes in the sunbeams. Bluebeard himself, a tall, imposing figure with a dramatically blue beard and dark clothing, stands in the shadows, his expression menacing.",
-      "seed": 1376977452
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration for \"Blue Beard\". The scene depicts the wife, a young woman with long dark hair and a pale dress, kneeling and peering, wide-eyed with horror, into a small, dark doorway, the forbidden closet. Inside, silhouetted against a dark red background streaked with crimson, the ghostly figures of dead women are barely visible. The dominant colors are deep blues and reds. Bluebeard, a large man with a dramatically exaggerated blue beard, stands behind her with a menacing posture, a glint of cruel triumph in his eyes. A key, stained with a bright impossible-to-clean blood red, lies on the floor near the wife's trembling hand. Warm, soft lighting creates a unsettling fairy tale atmosphere.",
+      "seed": 2210648567
     },
     {
       "id": "english__andrew_lang__the_blue_fairy_book__cinderella_or_the_little_glass_slipper",
@@ -21,8 +21,8 @@
       "book": "the_blue_fairy_book",
       "story": "cinderella_or_the_little_glass_slipper",
       "title": "Cinderella; or, the little glass slipper",
-      "prompt": "A Studio Ghibli-inspired book cover illustration of Cinderella in the magical moment of transformation in her godmother's chamber. Cinderella, with kind eyes and braided dark hair, kneels in her ragged dress with a hopeful expression. The fairy godmother, a warm and ethereal figure with flowing white hair and a wise smile, stands beside her, wand outstretched, bathing Cinderella in golden light. The light catches the shimmering threads as her clothes transform into a gown of gold and silver, adorned with jewels. Elegant glass slippers materialize on her feet. In the background, a gilded pumpkin coach awaits, with dapple-grey horses, a rat coachman with magnificent whiskers, and lizard footmen in livery. The chamber is cozy and filled with magical light, with whimsical details like oversized pumpkins and glowing mouse traps. Hand-painted watercolor style, warm and soft lighting, fairy tale atmosphere.",
-      "seed": 682992056
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration depicting the moment Cinderella arrives at the ball. The coach, a luminous, gilded pumpkin-carriage, pulled by six dappled grey mice-horses, is in the foreground. Cinderella, with sparkling glass slippers and a gown of shimmering cloth-of-gold adorned with jewels, is gracefully descending, hand-in-hand with the Prince. He is handsome, with a kind smile and a royal blue coat. The ballroom, filled with elegantly dressed guests, is visible through large arched windows, bathed in warm, soft light from chandeliers. All eyes are on Cinderella. The overall mood is magical and enchanting, with a fairy tale atmosphere. Colors are warm golds, blues, and pinks, with a focus on the radiant glow of Cinderella and her coach.",
+      "seed": 894736952
     },
     {
       "id": "english__andrew_lang__the_blue_fairy_book__east_of_the_sun_and_west_of_the_moon",
@@ -32,8 +32,8 @@
       "book": "the_blue_fairy_book",
       "story": "east_of_the_sun_and_west_of_the_moon",
       "title": "East of the sun and West of the moon",
-      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor illustration for the fairy tale \"East of the Sun and West of the Moon.\" The cover features the beautiful youngest daughter in a peasant dress, riding on the back of a large, fluffy WHITE BEAR through a snow-dusted forest. She clutches his fur, looking forward with a mix of apprehension and determination. The background shows a towering, snow-capped mountain with a faint, golden light emanating from a hidden doorway. Warm, soft lighting creates a sense of fairy tale wonder and a slightly unsettling mood, with blues and whites dominating the color palette, accented by the warm browns and reds of the girl's clothing and the golden light.",
-      "seed": 3302211539
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration for \"East of the Sun and West of the Moon\". A beautiful young woman with long golden hair, wearing simple, mended clothing, sits on the back of a massive, fluffy white bear. They are traversing a snow-covered mountain pass at night. The bear looks strong and gentle, his fur detailed with soft, feathery strokes. The mountain is silhouetted against a dark blue, star-filled sky, with the moon – a soft, warm light source - illuminating their path and casting long shadows. In the distance, nestled amongst snow-covered peaks, a grand, glowing castle shimmers, promising both beauty and unknown dangers. The air sparkles with magical, swirling snowflakes. The overall mood is one of fairy tale enchantment and impending quest, with warm but muted colors.",
+      "seed": 2066488600
     },
     {
       "id": "english__andrew_lang__the_blue_fairy_book__felicia_and_the_pot_of_pinks",
@@ -43,8 +43,8 @@
       "book": "the_blue_fairy_book",
       "story": "felicia_and_the_pot_of_pinks",
       "title": "Felicia and the pot of pinks",
-      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration for \"Felicia and the Pot of Pinks.\"\nMoonlit, fairy tale atmosphere, warm soft lighting.\n\nFelicia, a beautiful young girl with auburn hair and a simple dress, kneels beside a magical fountain in a forest clearing.\nShe's holding a dazzling gold pitcher, overflowing with sparkling, fragrant water.\nBefore her stands the radiant Queen of the Woods, adorned in emeralds and coral, with six handmaidens and attendants nearby.\nThe scene depicts Felicia's surprise as the Queen gifts her the golden pitcher.\nIn the background, a gold-laden table with a feast is set under a canopy of leaves.\nThe color palette is dominated by soft blues and greens of the forest, contrasted with the warm golds and pinks of the magical elements. A single silver ring glows on the Queen's finger.\nEthereal, dreamlike quality.",
-      "seed": 767430008
+      "prompt": "A Studio Ghibli-esque watercolor illustration for \"Felicia and the Pot of Pinks\". Felicia, around 16, with large, innocent eyes and braided dark hair, wearing simple peasant clothes, kneels beside a moonlit fountain. She is bathed in the soft, warm glow of a nearby, opulent procession led by the Queen of the Woods. The Queen, elegant and ethereal with flowing robes and a gentle expression, gestures warmly towards Felicia. The fountain sparkles with magical light, and Felicia's discarded wooden pitcher miraculously transforms into a golden vessel adorned with diamonds. In the background, a dark forest provides a mystical atmosphere. The overall mood is one of enchantment, kindness, and hopeful discovery, rendered in a palette of soft blues, pinks, golds, and greens, capturing the fairy tale essence of the story.",
+      "seed": 1793828118
     },
     {
       "id": "english__andrew_lang__the_blue_fairy_book__hansel_and_grettel",
@@ -54,8 +54,8 @@
       "book": "the_blue_fairy_book",
       "story": "hansel_and_grettel",
       "title": "Hansel and Grettel",
-      "prompt": "A Studio Ghibli-style, hand-painted watercolor book cover illustration of Hansel and Gretel lost in a dark forest. Warm, soft lantern light held by Hansel illuminates his worried face and Gretel's tearful expression as she clutches his arm. Towering, ancient trees surround them, their gnarled roots and thick trunks creating a maze-like setting. Scattered leaves cover the ground, obscuring the faint trail of breadcrumbs. Above, a sliver of moon is barely visible through the dense canopy. The overall mood is one of foreboding and vulnerability, with deep greens and browns dominating the color palette, punctuated by small pops of color from berries and the children’s clothing.",
-      "seed": 2328056007
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration of Hansel and Gretel lost in the woods. It is night, and a full moon illuminates the scene with a soft, warm glow, dappling through the dense trees. Hansel, a small boy with tousled brown hair and patched clothes, holds Gretel's hand. Gretel, slightly younger, has long blonde braids and wears a simple dress. They look exhausted and scared, glancing around at the towering, stylized trees with large, expressive eyes. The forest floor is covered in fallen leaves and moss, with faint, scattered breadcrumbs barely visible. In the background, stylized, dark silhouettes of trees create depth. The overall mood is one of vulnerability and a touch of melancholy, with cool blues and greens of the forest contrasting with the moon's warm, hopeful light. A fairy tale atmosphere with detailed textures and gentle rendering.",
+      "seed": 1686402469
     }
   ]
 }
