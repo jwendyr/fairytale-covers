@@ -1,6 +1,6 @@
 {
-  "batch_id": "batch_1772106479154",
-  "created_at": "2026-02-26T11:48:06.202Z",
+  "batch_id": "batch_1772106904843",
+  "created_at": "2026-02-26T11:55:09.909Z",
   "jobs": [
     {
       "id": "english__andrew_lang__the_blue_fairy_book__blue_beard",
@@ -10,8 +10,8 @@
       "book": "the_blue_fairy_book",
       "story": "blue_beard",
       "title": "Blue Beard",
-      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration for \"Blue Beard\".\n\nA young woman with long dark hair, wearing a blue dress, kneels, weeping, in front of Blue Beard. He is tall, imposing, with a dramatically blue beard, holding a gleaming sabre, standing in the doorway to a dark, foreboding tower. Sister Anne, with braided hair, peers anxiously from the tower's highest window.\n\nThe setting is a large, ornate room with rich tapestries and gilded furniture, hinting at wealth and danger. Soft, warm lighting emphasizes the fairy tale atmosphere. The color palette is dominated by blues, golds, and greens, with a stark contrast introduced by the dark, blood-like stains on the floor near Blue Beard's feet that are also mirrored on the key in his hand. A sense of impending doom hangs in the air.",
-      "seed": 4125968740
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration depicting the climactic scene of Bluebeard. Sister Anne, with long dark hair blowing in the wind, stands atop a tall, ancient stone tower, her dress a pale blue. She strains her eyes towards the horizon. Below in the courtyard, Bluebeard, a tall, imposing figure with a menacing blue beard and dark blue coat, is framed in the arched doorway of the tower, brandishing a large, gleaming silver sabre. Faint dust swirls in the air. Warm, soft lighting emphasizes the desperate mood and the contrast between hope and imminent danger. The color palette consists of warm yellows and greens in the distant landscape, contrasting with the cool blues and grays of the tower and Bluebeard's clothing. A fairytale atmosphere is achieved through the detailed rendering of the stone textures and the dynamic poses of the characters.",
+      "seed": 1863305100
     },
     {
       "id": "english__andrew_lang__the_blue_fairy_book__cinderella_or_the_little_glass_slipper",
@@ -21,8 +21,8 @@
       "book": "the_blue_fairy_book",
       "story": "cinderella_or_the_little_glass_slipper",
       "title": "Cinderella; or, the little glass slipper",
-      "prompt": "A hand-painted watercolor illustration in a Studio Ghibli style for a fairy tale book cover of Cinderella. Cinderella, transformed and radiant in a shimmering gown of gold and silver, stands at the foot of the palace steps. Her glass slippers sparkle in the soft, warm light. The Prince, handsome with a kind smile, extends his hand to her. Behind them, the grand ballroom glows with warm light spilling out from arched doorways, revealing silhouettes of dancing figures. Her magical coach, a gilded pumpkin carriage drawn by dapple-gray mice-horses, waits nearby. The mood is enchanted and celebratory, with a hint of mystery. The colors are rich golds, silvers, and soft blues, with highlights of sparkling light. Fairy tale atmosphere with a sense of wonder.",
-      "seed": 2173601197
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration showing Cinderella in her glittering gown of gold and silver, adorned with jewels, descending from the golden pumpkin coach. The handsome, young Prince, with soft brown hair and kind eyes, reaches out to take her hand. Six dapple-grey horses and six footmen in gold and silver livery stand by as the jolly rat coachman with smart whiskers grins. The scene is set outside the castle, bathed in warm, soft lighting, suggesting a magical, fairy-tale atmosphere just before midnight. The castle glows in the background, with a hint of the ballroom visible through the arched doorway. Cinderella's glass slippers sparkle as she steps onto the cobbled path. Mood: joyous, enchanted, romantic.",
+      "seed": 1376206261
     }
   ]
 }
