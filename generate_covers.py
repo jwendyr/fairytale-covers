@@ -99,7 +99,11 @@ def setup_ssh():
         f.write(key_data)
     os.chmod(key_path, 0o600)
 
-    run_cmd('ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null')
+    # Embed GitHub host keys directly — ssh-keyscan FAILS on most vast.ai machines (port 22 blocked)
+    known_hosts = os.path.expanduser("~/.ssh/known_hosts")
+    with open(known_hosts, "a") as f:
+        f.write("github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl\n")
+        f.write("github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=\n")
     run_cmd('git config --global user.email "gpu-worker@fairytale.ucok.org"')
     run_cmd('git config --global user.name "Fairytale GPU Worker"')
 
