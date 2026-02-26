@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Fairytale Cover Generator — runs on vast.ai GPU instances.
-Pulls FLUX.1 Dev from HuggingFace, generates covers from batch.json,
-pushes results back to GitHub.
+Pulls FLUX.1-schnell from HuggingFace (Apache 2.0, ungated),
+generates covers from batch.json, pushes results back to GitHub.
 """
 
 import json
@@ -18,7 +18,7 @@ WORK_DIR = "/workspace/fairytale-covers"
 BATCH_FILE = "batch.json"
 OUTPUT_DIR = "output"
 STATUS_FILE = "status.json"
-MODEL_ID = "black-forest-labs/FLUX.1-dev"
+MODEL_ID = "black-forest-labs/FLUX.1-schnell"
 
 
 def run_cmd(cmd, cwd=None, timeout=300):
@@ -120,13 +120,14 @@ def generate_image(pipe, prompt, output_path, seed=None):
     if seed is not None:
         generator = torch.Generator("cpu").manual_seed(seed)
 
+    # FLUX.1-schnell: optimized for 4 steps, no guidance needed
     image = pipe(
         prompt,
         height=1024,
         width=1024,
-        guidance_scale=3.5,
-        num_inference_steps=30,
-        max_sequence_length=512,
+        guidance_scale=0.0,
+        num_inference_steps=4,
+        max_sequence_length=256,
         generator=generator,
     ).images[0]
 
