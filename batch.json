@@ -1,6 +1,6 @@
 {
-  "batch_id": "batch_1772104540756",
-  "created_at": "2026-02-26T11:15:45.455Z",
+  "batch_id": "batch_1772104674188",
+  "created_at": "2026-02-26T11:17:59.006Z",
   "jobs": [
     {
       "id": "english__andrew_lang__the_blue_fairy_book__blue_beard",
@@ -10,8 +10,8 @@
       "book": "the_blue_fairy_book",
       "story": "blue_beard",
       "title": "Blue Beard",
-      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration for \"Blue Beard\". A young woman, the newest wife, with long flowing auburn hair and a pale, terrified face, peers with wide eyes into a dark, blood-stained closet. She wears an elegant emerald green gown. In her trembling hand, she holds a small ornate golden key, also stained with blood. The closet is filled with the ghostly figures of deceased women in white gowns, their faces obscured. The setting is the end of a long, shadowy gallery with ornate gothic architecture. Warm, soft light streams from a distant window, illuminating dust motes in the air. The overall mood is suspenseful and unsettling, with a fairy tale eeriness. Dominant colors are deep blues, greens, reds, and gold accents.",
-      "seed": 2118189684
+      "prompt": "A Studio Ghibli-inspired book cover featuring Bluebeard's wife, a young woman with long, flowing dark hair and a white nightgown, kneeling in terror before the open closet door. The closet is dimly lit, revealing a chilling scene of several lifeless women in elegant gowns, their bodies arranged against the blood-splattered walls. In her trembling hand, she holds the small key, stained with fresh blood that seems to glow faintly. The scene is set in the grand gallery of Bluebeard's castle, suggested by ornate, dark wood paneling and a glimpse of a long, shadowed hallway, all rendered in hand-painted watercolor style with soft, warm lighting to enhance the fairy tale atmosphere, focusing on the horror and suspense of the moment.",
+      "seed": 728558279
     },
     {
       "id": "english__andrew_lang__the_blue_fairy_book__cinderella_or_the_little_glass_slipper",
@@ -21,8 +21,8 @@
       "book": "the_blue_fairy_book",
       "story": "cinderella_or_the_little_glass_slipper",
       "title": "Cinderella; or, the little glass slipper",
-      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor illustration for a fairy tale book cover of Cinderella. The scene depicts Cinderella in her glittering gown of gold and silver, adorned with jewels, at the royal ball. She is dancing with the Prince in a grand ballroom filled with elegantly dressed nobles in the background. Soft, golden light streams through tall arched windows, illuminating the scene. Cinderella has kind eyes and a gentle smile. The Prince gazes at her adoringly. Her glass slippers sparkle with light. The overall mood is magical and romantic, with warm colors dominating the palette: golds, silvers, creams, soft blues, and pinks. The style should evoke a sense of wonder and enchantment.",
-      "seed": 1290298437
+      "prompt": "A Studio Ghibli-inspired, hand-painted watercolor book cover illustration of Cinderella's arrival at the ball, warm soft lighting, fairy tale atmosphere. Cinderella, transformed and radiant in a gown of shimmering gold and silver cloth, adorned with jewels, is stepping out of a magnificent, golden coach. The coach, formerly a pumpkin, is pulled by six dappled grey horses, and a plump rat-turned-coachman with extravagant whiskers sits proudly in his seat. Lizards-turned-footmen in livery stand attentively behind. The King's son, a handsome prince with kind eyes, extends his hand to help her alight. Bystanders, including Cinderella's stepsisters in elaborate gowns, gaze in awe at Cinderella. The scene is set in front of a grand palace, bathed in the warm glow of lanterns. The overall mood is magical, enchanting, and filled with wonder.",
+      "seed": 3247019008
     }
   ]
 }
