@@ -1,0 +1,28 @@
+{
+  "batch_id": "sd35_comparison_1772132217",
+  "models": [
+    "stabilityai/stable-diffusion-3.5-large"
+  ],
+  "total": 2,
+  "completed": 2,
+  "failed": 0,
+  "results": [
+    {
+      "id": "english__andrew_lang__the_blue_fairy_book__blue_beard",
+      "story_path": "english/andrew_lang/the_blue_fairy_book/blue_beard",
+      "model": "stabilityai/stable-diffusion-3.5-large",
+      "filename": "stable-diffusion-3.5-large/english__andrew_lang__the_blue_fairy_book__blue_beard.png",
+      "status": "completed",
+      "file_size": 1878192
+    },
+    {
+      "id": "english__andrew_lang__the_blue_fairy_book__cinderella_or_the_little_glass_slipper",
+      "story_path": "english/andrew_lang/the_blue_fairy_book/cinderella_or_the_little_glass_slipper",
+      "model": "stabilityai/stable-diffusion-3.5-large",
+      "filename": "stable-diffusion-3.5-large/english__andrew_lang__the_blue_fairy_book__cinderella_or_the_little_glass_slipper.png",
+      "status": "completed",
+      "file_size": 1887075
+    }
+  ],
+  "elapsed_seconds": 1093
+}
