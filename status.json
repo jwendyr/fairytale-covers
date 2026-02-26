@@ -1,12 +1,10 @@
 {
-  "phase": "generating",
+  "phase": "loading_model",
   "batch_id": "comparison_1772108361",
-  "model": "Freepik/flux.1-lite-8B-alpha",
-  "model_index": 1,
+  "model": "black-forest-labs/FLUX.1-dev",
+  "model_index": 2,
   "total_models": 3,
   "total": 6,
   "completed": 2,
-  "failed": 0,
-  "elapsed_seconds": 473,
-  "updated_at": "2026-02-26T17:29:44Z"
+  "updated_at": "2026-02-26T17:29:50Z"
 }
