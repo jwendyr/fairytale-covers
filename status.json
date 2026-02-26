@@ -1,7 +1,10 @@
 {
-  "phase": "loading_model",
+  "phase": "generating",
   "batch_id": "batch_1772106904843",
   "total": 2,
-  "completed": 0,
-  "updated_at": "2026-02-26T11:57:33Z"
+  "completed": 2,
+  "failed": 0,
+  "current_job": 2,
+  "elapsed_seconds": 304,
+  "updated_at": "2026-02-26T12:02:37Z"
 }
