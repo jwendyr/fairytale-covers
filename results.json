@@ -1,0 +1,187 @@
+{
+  "batch_id": "flux-dev-1410-full",
+  "models": [
+    "black-forest-labs/FLUX.1-dev"
+  ],
+  "total": 1410,
+  "completed": 0,
+  "failed": 25,
+  "results": [
+    {
+      "id": "job_0",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_1",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_2",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_3",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_4",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_5",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_6",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_7",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_8",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_9",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_10",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_11",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_12",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_13",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_14",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_15",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_16",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_17",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_18",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_19",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_20",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_21",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_22",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_23",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    },
+    {
+      "id": "job_24",
+      "story_path": "",
+      "model": "black-forest-labs/FLUX.1-dev",
+      "status": "failed",
+      "error": "unknown file extension: "
+    }
+  ],
+  "elapsed_seconds": 2821
+}
