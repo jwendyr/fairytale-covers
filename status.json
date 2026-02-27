@@ -1,7 +1,10 @@
 {
-  "phase": "complete",
-  "batch_id": "unknown",
-  "total": 0,
+  "phase": "loading_model",
+  "batch_id": "flux-dev-1410-full",
+  "model": "black-forest-labs/FLUX.1-dev",
+  "model_index": 1,
+  "total_models": 1,
+  "total": 1410,
   "completed": 0,
-  "updated_at": "2026-02-27T22:13:51Z"
+  "updated_at": "2026-02-27T22:48:14Z"
 }
