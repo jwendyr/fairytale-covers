@@ -4,534 +4,209 @@
     "black-forest-labs/FLUX.1-dev"
   ],
   "total": 1410,
-  "completed": 0,
-  "failed": 75,
+  "completed": 25,
+  "failed": 0,
   "results": [
     {
       "id": "job_0",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/everything_in_its_proper_place",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__everything_in_its_proper_place.png",
+      "status": "completed",
+      "file_size": 1828189
     },
     {
       "id": "job_1",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/five_peas_from_a_pod",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__five_peas_from_a_pod.png",
+      "status": "completed",
+      "file_size": 1320357
     },
     {
       "id": "job_2",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/godfathers_picture_book",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__godfathers_picture_book.png",
+      "status": "completed",
+      "file_size": 1427041
     },
     {
       "id": "job_3",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/golden_treasure",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__golden_treasure.png",
+      "status": "completed",
+      "file_size": 1521257
     },
     {
       "id": "job_4",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/grandmother",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__grandmother.png",
+      "status": "completed",
+      "file_size": 1500014
     },
     {
       "id": "job_5",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/great_grandfather",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__great_grandfather.png",
+      "status": "completed",
+      "file_size": 1206858
     },
     {
       "id": "job_6",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/heartache",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__heartache.png",
+      "status": "completed",
+      "file_size": 1538656
     },
     {
       "id": "job_7",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/holger_danske",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__holger_danske.png",
+      "status": "completed",
+      "file_size": 1723430
     },
     {
       "id": "job_8",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/ib_and_little_christina",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__ib_and_little_christina.png",
+      "status": "completed",
+      "file_size": 1579882
     },
     {
       "id": "job_9",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/in_a_thousand_years",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__in_a_thousand_years.png",
+      "status": "completed",
+      "file_size": 1660584
     },
     {
       "id": "job_10",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/in_the_childrens_room",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__in_the_childrens_room.png",
+      "status": "completed",
+      "file_size": 1447780
     },
     {
       "id": "job_11",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/in_the_duck_yard",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__in_the_duck_yard.png",
+      "status": "completed",
+      "file_size": 1213947
     },
     {
       "id": "job_12",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/kept_secret_but_not_forgotten",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__kept_secret_but_not_forgotten.png",
+      "status": "completed",
+      "file_size": 1331125
     },
     {
       "id": "job_13",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/little_claus_and_big_claus",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__little_claus_and_big_claus.png",
+      "status": "completed",
+      "file_size": 1383394
     },
     {
       "id": "job_14",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/little_idas_flowers",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__little_idas_flowers.png",
+      "status": "completed",
+      "file_size": 1402702
     },
     {
       "id": "job_15",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/little_tuk",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__little_tuk.png",
+      "status": "completed",
+      "file_size": 1517073
     },
     {
       "id": "job_16",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/luck_may_lie_in_a_pin",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__luck_may_lie_in_a_pin.png",
+      "status": "completed",
+      "file_size": 1380795
     },
     {
       "id": "job_17",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/moving_day",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__moving_day.png",
+      "status": "completed",
+      "file_size": 1647232
     },
     {
       "id": "job_18",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/ole_luk_oie_the_dream_god",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__ole_luk_oie_the_dream_god.png",
+      "status": "completed",
+      "file_size": 1746739
     },
     {
       "id": "job_19",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/ole_the_tower_keeper",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__ole_the_tower_keeper.png",
+      "status": "completed",
+      "file_size": 1498414
     },
     {
       "id": "job_20",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/on_judgment_day",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__on_judgment_day.png",
+      "status": "completed",
+      "file_size": 1340918
     },
     {
       "id": "job_21",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/peiter_peter_and_peer",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__peiter_peter_and_peer.png",
+      "status": "completed",
+      "file_size": 1561946
     },
     {
       "id": "job_22",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/pen_and_inkstand",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__pen_and_inkstand.png",
+      "status": "completed",
+      "file_size": 1449326
     },
     {
       "id": "job_23",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/she_was_good_for_nothing",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__she_was_good_for_nothing.png",
+      "status": "completed",
+      "file_size": 1841793
     },
     {
       "id": "job_24",
-      "story_path": "",
+      "story_path": "english/andersen/collected_fairy_tales/something",
       "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_25",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_26",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_27",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_28",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_29",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_30",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_31",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_32",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_33",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_34",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_35",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_36",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_37",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_38",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_39",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_40",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_41",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_42",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_43",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_44",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_45",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_46",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_47",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_48",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_49",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_50",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_51",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_52",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_53",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_54",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_55",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_56",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_57",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_58",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_59",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_60",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_61",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_62",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_63",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_64",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_65",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_66",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_67",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_68",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_69",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_70",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_71",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_72",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_73",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
-    },
-    {
-      "id": "job_74",
-      "story_path": "",
-      "model": "black-forest-labs/FLUX.1-dev",
-      "status": "failed",
-      "error": "unknown file extension: "
+      "filename": "FLUX.1-dev/english__andersen__collected_fairy_tales__something.png",
+      "status": "completed",
+      "file_size": 1532489
     }
   ],
-  "elapsed_seconds": 5764
+  "elapsed_seconds": 1533
 }
